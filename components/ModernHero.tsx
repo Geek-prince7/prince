@@ -2,10 +2,11 @@
 
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import { FaGithub, FaLinkedin, FaArrowRight } from 'react-icons/fa'
 import { SiLeetcode } from 'react-icons/si'
 import { HiDownload } from 'react-icons/hi'
+
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/prince' : ''
 
 export default function ModernHero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -136,7 +137,7 @@ export default function ModernHero() {
               </motion.a>
 
               <motion.a
-                href="/PRINCE_DUBEY_5YRS_DEV.pdf"
+                href={`${BASE_PATH}/PRINCE_DUBEY_5YRS_DEV.pdf`}
                 download
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -202,12 +203,10 @@ export default function ModernHero() {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <Image
-                  src="/Prince.png"
+                <img
+                  src={`${BASE_PATH}/Prince.png`}
                   alt="Prince Dubey - Senior Backend Engineer"
-                  fill
-                  className="object-cover"
-                  priority
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
                 
                 {/* Overlay Gradient */}

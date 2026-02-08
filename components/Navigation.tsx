@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/prince' : ''
+
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -56,7 +58,7 @@ export default function Navigation() {
 
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="/PRINCE_DUBEY_5YRS_DEV.pdf"
+              href={`${BASE_PATH}/PRINCE_DUBEY_5YRS_DEV.pdf`}
               download
               className="btn btn-primary text-sm py-2 px-3"
             >
@@ -108,7 +110,7 @@ export default function Navigation() {
               </Link>
             ))}
             <a
-              href="/PRINCE_DUBEY_5YRS_DEV.pdf"
+              href={`${BASE_PATH}/PRINCE_DUBEY_5YRS_DEV.pdf`}
               download
               className="block mt-3 btn btn-primary w-full text-center"
             >

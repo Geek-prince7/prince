@@ -1,7 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
+
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/prince' : ''
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false)
@@ -93,7 +94,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
               <a
-                href="/PRINCE_DUBEY_5YRS_DEV.pdf"
+                href={`${BASE_PATH}/PRINCE_DUBEY_5YRS_DEV.pdf`}
                 download
                 className="group relative px-8 py-3 border-2 border-blue-400 text-blue-400 rounded-lg font-semibold overflow-hidden hover:bg-blue-400/10 transition-all duration-300 hover:scale-105"
               >
@@ -163,12 +164,10 @@ export default function Hero() {
               </div>
               
               <div className="relative w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-blue-500/50 shadow-2xl shadow-blue-500/50 hover:scale-105 transition-transform duration-500 hover:border-cyan-500/50">
-                <Image
-                  src="/Prince.png"
+                <img
+                  src={`${BASE_PATH}/Prince.png`}
                   alt="Prince Dubey - Senior Backend Engineer, Distributed Systems Expert, Kafka Specialist, ClickHouse Developer"
-                  fill
-                  className="object-cover hover:scale-110 transition-transform duration-700"
-                  priority
+                  className="absolute inset-0 w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                 />
               </div>
               

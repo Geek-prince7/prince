@@ -13,6 +13,8 @@ import {
 import { SiLeetcode } from 'react-icons/si'
 import { HiMail } from 'react-icons/hi'
 
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/prince' : ''
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -131,7 +133,7 @@ export default function Contact() {
               </div>
               <div className="space-y-3">
                 <a
-                  href="/PRINCE_DUBEY_5YRS_DEV.pdf"
+                  href={`${BASE_PATH}/PRINCE_DUBEY_5YRS_DEV.pdf`}
                   download
                   className="group flex items-center gap-3 text-blue-300 hover:text-white transition-all hover:translate-x-2 duration-300"
                 >

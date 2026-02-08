@@ -17,9 +17,12 @@ import type { NextConfig } from 'next'
 //   reactStrictMode: true,
 // }
 
+const isProd = process.env.NODE_ENV === 'production'
+
 const nextConfig = {
   output: 'export',
-  basePath: '/prince',
+  basePath: isProd ? '/prince' : '',
+  assetPrefix: isProd ? '/prince/' : '',
   images: {
     unoptimized: true,
   },
