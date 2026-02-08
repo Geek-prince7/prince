@@ -239,5 +239,3 @@ After pushing to GitHub, check:
 - Green checkmark = successful deployment
 
 ---
-
-**Need help?** Contact: princedby729@gmail.com
