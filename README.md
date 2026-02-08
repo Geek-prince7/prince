@@ -96,36 +96,32 @@ Update the color scheme in `app/globals.css`:
 }
 ```
 
-## 🚀 Deployment
+## 🚀 Deployment with Auto-Deploy
 
-### Deploy to Vercel (Recommended)
-
-```bash
-# Install Vercel CLI
-npm install -g vercel
-
-# Deploy
-vercel
-```
-
-Or use the Vercel dashboard:
-1. Push code to GitHub
-2. Import repository in Vercel
-3. Click Deploy
-
-### Deploy to Netlify
+### Quick Deploy to Vercel (Recommended - 2 minutes)
 
 ```bash
-npm run build
-netlify deploy --prod
+# 1. Push to GitHub
+git add .
+git commit -m "Deploy portfolio"
+git push origin main
+
+# 2. Go to vercel.com → Import your repo → Deploy
+# ✅ Done! Auto-deploys on every push to main
 ```
 
-### Deploy to AWS Amplify
+### GitHub Actions Workflows Included
 
-1. Push to GitHub/GitLab
-2. Connect repository in AWS Amplify Console
-3. Configure build settings
-4. Deploy
+3 workflows ready in `.github/workflows/`:
+- ✅ **deploy.yml** - Vercel deployment
+- ✅ **github-pages.yml** - GitHub Pages deployment
+- ✅ **netlify.yml** - Netlify deployment
+
+**Auto-triggers on:**
+- Push to `main` branch
+- PR merge to `main` branch
+
+See **QUICK_DEPLOY.md** and **DEPLOYMENT_GUIDE.md** for detailed setup.
 
 ## 📊 SEO Features
 
