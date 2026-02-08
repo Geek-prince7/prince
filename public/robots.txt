@@ -1,0 +1,14 @@
+# robots.txt for https://princedubey.com
+
+User-agent: *
+Allow: /
+
+# Disallow private pages (if any in future)
+Disallow: /api/
+Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://princedubey.com/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
