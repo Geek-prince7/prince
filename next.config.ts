@@ -19,9 +19,11 @@ import type { NextConfig } from 'next'
 
 const nextConfig = {
   output: 'export',
+  basePath: '/prince',
   images: {
     unoptimized: true,
   },
+  reactStrictMode: true,
 }
 
 export default nextConfig
